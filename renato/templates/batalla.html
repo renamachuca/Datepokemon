@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batallas</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pokemon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Asegura que el body ocupe el 100% de la altura del viewport */
+            background-image: url('https://cdn.vox-cdn.com/thumbor/PqAwdNpc7p-5GUCSMxQPehSU-ck=/0x0:1920x1200/1200x800/filters:focal(810x375:1116x681)/cdn.vox-cdn.com/uploads/chorus_image/image/72524797/pikachu_artwork.0.jpg');
+            background-size: cover; /* Cubre el fondo completamente */
+            background-position: center; /* Centra la imagen en el fondo */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #635555;
+        }
+    </style>
+    <body>
+        <style>
+            body {
+                color: #fafafa; /* Cambia el color del texto a un gris oscuro */
+            }
+        </style>
+        
+    </body>
+</head>
+<body>
+    <h1>Lista de Batallas </h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID Batalla</th>
+                <th>Entrenador 1</th>
+                <th>Entrenador 2</th>
+                <th>Entrenador Ganador ID</th>
+                <th>Entrenador Perdedor ID</th>
+                <th>ID Pokémon 1</th>
+                <th>ID Pokémon 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for batalla in batallas %}
+            <tr>
+                <td>{{ batalla.id_batalla }}</td>
+                <td>{{ batalla.entrenador_1 }}</td>
+                <td>{{ batalla.entrenador_2 }}</td>
+                <td>{{ batalla.entrenador_ganador_id }}</td>
+                <td>{{ batalla.entrenador_perdedor_id }}</td>
+                <td>{{ batalla.id_pokemon1 }}</td>
+                <td>{{ batalla.id_pokemon2 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
